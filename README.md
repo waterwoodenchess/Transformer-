@@ -185,6 +185,8 @@ decoder详细结构图如下图所示：
 
 包含两个 Multi-Head Attention 层；第一个 Multi-Head Attention 层采用了 Masked 操作；第二个 Multi-Head Attention 层的K, V矩阵使用 Encoder 的编码信息矩阵C进行计算，而Q使用上一个 Decoder block 的输出计算；最后有一个 Softmax 层计算下一个翻译单词的概率。
 
+有人可能会好奇为什么decoder的输入叫做“output”，这里的意思是，由于我们要对整个模型进行调试校对，所以我们必须要把正确的语句给decoder，这样能够在之后的比对环节对自己预测的单词进行比对调整，这个我们叫做“teacher forcing”，之后我们会详细讲到。所以输出的就是预测单词的概率，概率最大的单词就是最终预测的单词。
+
 5.1 第一个 Multi-Head Attention
 
 在decoder的这个Multi-Head Attention中，我们用到了masked和teacher forcing的概念。

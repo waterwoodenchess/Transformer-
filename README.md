@@ -1,4 +1,4 @@
-# Transformer-
+# Transformer
 这个是对Transformer的理论学习
 
 之前在对光场图像处理进行论文学习的时候我说过现在的光场处理还是用的是transformer啊CNN啊这些的。所以今天对transformer进行理论学习，之后可能会有实操学习。两个放在一起吧。
